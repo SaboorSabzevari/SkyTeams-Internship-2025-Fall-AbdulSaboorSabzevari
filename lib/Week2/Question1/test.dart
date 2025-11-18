@@ -1,13 +1,14 @@
-import 'package:sky/Week2/Question1/swap.dart';
+// test.dart برای swap
 import 'package:test/test.dart';
+import 'swap.dart';
 
 void main() {
-  test('swapAandB correctly swaps two numbers', () {
-    int a = 10;
-    int b = 5;
+  test('swapValues correctly swaps two numbers', () {
+    int x = 8;
+    int y = 3;
 
-    int result = swapAandB(a, b);
+    int result = swapValues(x, y);
 
-    expect(result, equals(10));
+    expect(result, equals(8));
   });
 }
