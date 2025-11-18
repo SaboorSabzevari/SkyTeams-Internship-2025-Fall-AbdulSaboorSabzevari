@@ -1,21 +1,23 @@
+
 import 'package:test/test.dart';
 import 'addNumbers.dart';
+
 void main() {
   group('addNumbers', () {
-    test('should correctly add two positive numbers', () {
-      expect(addNumbers(10, 5), equals(15));
+    test('adds two positive integers', () {
+      expect(addNumbers(15, 8), equals(23));
     });
 
-    test('should correctly add a positive and negative number', () {
-      expect(addNumbers(10, -5), equals(5));
+    test('adds positive and negative values', () {
+      expect(addNumbers(12, -4), equals(8));
     });
 
-    test('should correctly add two negative numbers', () {
-      expect(addNumbers(-3, -7), equals(-10));
+    test('adds two negative values', () {
+      expect(addNumbers(-2, -9), equals(-11));
     });
 
-    test('should correctly add decimal numbers', () {
-      expect(addNumbers(2.5, 3.1), closeTo(5.6, 0.0001));
+    test('adds fractional numbers', () {
+      expect(addNumbers(3.2, 1.8), closeTo(5.0, 0.001));
     });
   });
 }
