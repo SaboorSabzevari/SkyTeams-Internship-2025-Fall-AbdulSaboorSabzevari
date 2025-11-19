@@ -1,42 +1,40 @@
-import 'package:sky/week1/Question3/reverse.dart';
 import 'package:test/test.dart';
+import 'reverse.dart';
 
 void main() {
   group('reverseString', () {
-    test('should reverse a normal string', () {
-      expect(reverseString('dart'), equals('trad'));
+    test('reverses standard string', () {
+      expect(reverseString('code'), equals('edoc'));
     });
 
-    test('should return empty string when input is empty', () {
+    test('empty string remains empty', () {
       expect(reverseString(''), equals(''));
     });
 
-    test('should handle single-character strings', () {
-      expect(reverseString('a'), equals('a'));
+    test('single character string', () {
+      expect(reverseString('x'), equals('x'));
     });
-    test('Should return empty', (){
-      expect(reverseString(''), equals(''));
-    });
-    test('should handle strings with spaces', () {
-      expect(reverseString('hello world'), equals('dlrow olleh'));
+
+    test('string with whitespace', () {
+      expect(reverseString('hello there'), equals('ereht olleh'));
     });
   });
 
   group('reverseList', () {
-    test('should reverse a list of numbers', () {
-      expect(reverseList([1, 2, 3, 4]), equals([4, 3, 2, 1]));
+    test('reverses number list', () {
+      expect(reverseList([5, 6, 7, 8]), equals([8, 7, 6, 5]));
     });
 
-    test('should reverse a list of strings', () {
-      expect(reverseList(['a', 'b', 'c']), equals(['c', 'b', 'a']));
+    test('reverses string list', () {
+      expect(reverseList(['x', 'y', 'z']), equals(['z', 'y', 'x']));
     });
 
-    test('should return empty list when input is empty', () {
+    test('empty list remains empty', () {
       expect(reverseList([]), equals([]));
     });
 
-    test('should handle single-element list', () {
-      expect(reverseList([42]), equals([42]));
+    test('single element list', () {
+      expect(reverseList([10]), equals([10]));
     });
   });
 }
