@@ -1,25 +1,26 @@
+
 import 'package:test/test.dart';
 import 'largestAndSmallest.dart';
 
 void main() {
   test('Find largest and smallest of three numbers', () {
-    final result = largestAndSmallest(10, 13, 17);
+    final result = findMinMax(7, 15, 12);
 
-    expect(result['max'], equals(17));
-    expect(result['min'], equals(10));
+    expect(result['max'], equals(15));
+    expect(result['min'], equals(7));
   });
 
   test('All numbers equal', () {
-    final result = largestAndSmallest(5, 5, 5);
+    final result = findMinMax(8, 8, 8);
 
-    expect(result['max'], equals(5));
-    expect(result['min'], equals(5));
+    expect(result['max'], equals(8));
+    expect(result['min'], equals(8));
   });
 
   test('Negative numbers', () {
-    final result = largestAndSmallest(-2, -10, -5);
+    final result = findMinMax(-3, -15, -7);
 
-    expect(result['max'], equals(-2));
-    expect(result['min'], equals(-10));
+    expect(result['max'], equals(-3));
+    expect(result['min'], equals(-15));
   });
 }

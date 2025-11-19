@@ -1,3 +1,7 @@
+/*
+5. Compute Simple and Compound Interest
+ */
+
 import 'dart:math';
 
 Map<String, double> simpleAndCompoundinterest (double principle, double rate, double time){

@@ -1,22 +1,25 @@
-Map<String,int> largestAndSmallest(int firstNumber, int secondNumber, int thirdNumber) {
-  int max = firstNumber;
-  int min = firstNumber;
-
-  //largest number
-  /* first checks the first number and second number and change
-   the max if needed then checks with the third one */
-  if (secondNumber > max) max = secondNumber;
-  if (thirdNumber > max) max = thirdNumber;
-
-  //smallest number
-
-  /* first checks the first number and second number and change
-   the min if needed then checks with the third number */
-  if (secondNumber < min) min = secondNumber;
-  if (thirdNumber < min) min = thirdNumber;
-
-  print('Largest: $max, Smallest: $min');
+/*
+2. Find the largest and smallest of three numbers
+Descripton: Read three integers and print the largest and smallest.
+Example:
+Input:
+3, 9, 5
+Output:
+Largest: 9, Smallest: 3
+ */
+Map<String, int> findMinMax(int num1, int num2, int num3) {
+  int maximum = num1;
+  int minimum = num1;
 
 
-  return {'max': max, 'min': min};
+  if (num2 > maximum) maximum = num2;
+  if (num3 > maximum) maximum = num3;
+
+
+  if (num2 < minimum) minimum = num2;
+  if (num3 < minimum) minimum = num3;
+
+  print('بزرگترین: $maximum, کوچکترین: $minimum');
+
+  return {'max': maximum, 'min': minimum};
 }
