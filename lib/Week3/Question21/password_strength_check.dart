@@ -33,7 +33,7 @@ String strengthChecker(String password) {
     }
 
     if (hasUppercase && hasLowercase && hasNumber) {
-      break;
+      return "Strong";
     }
   }
 

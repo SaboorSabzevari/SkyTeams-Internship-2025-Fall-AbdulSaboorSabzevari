@@ -7,7 +7,7 @@ Input:
 Output:
 120*/
 
-int findFactoril(int n) {
+int findFactorial(int n) {
   int result = 1;
 
   for (int i = 1; i <= n; i++) {

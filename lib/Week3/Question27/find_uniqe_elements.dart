@@ -5,25 +5,24 @@ Example:
 Input:
 [1, 2, 2, 3, 4, 4, 5]
 Output:
-[1, 2, 3, 4, 5]
+[1, 3, 5]
  */
 
-  List findUniqueElements(List array) {
-    List uniqueElements = [];
+List findUniqueElements(List array) {
+  List unique = [];
 
-    for (int i = 0; i < array.length; i++) {
-      bool alreadyExists = false;
-      for (int j = 0; j < uniqueElements.length; j++) {
-        if (array[i] == uniqueElements[j]) {
-          alreadyExists = true;
-          break;
-        }
-      }
-
-      if (!alreadyExists) {
-        uniqueElements.add(array[i]);
+  for (int i = 0; i < array.length; i++) {
+    int count = 0;
+    for (int j = 0; j < array.length; j++) {
+      if (array[i] == array[j]) {
+        count++;
       }
     }
-    return uniqueElements;
+    if (count == 1) {
+      unique.add(array[i]);
+    }
   }
+  return unique;
+}
+
 

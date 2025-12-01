@@ -10,15 +10,19 @@ Input:
 20
 Output:
 Not Prime*/
-String isPrime(int number){
-  if(number <= 1) {
-    return "Not Prime";
-  } else {
-    for(int i = 2; i * i <= number; i++){
-      if(number % i == 0){
-        return "Not Prime";
-      }
+// تابع اصلی: بررسی عدد اول → خروجی Boolean
+bool isPrimeNumber(int number) {
+  if (number <= 1) return false;
+
+  for (int i = 2; i * i <= number; i++) {
+    if (number % i == 0) {
+      return false;
     }
   }
-  return "Prime";
+  return true;
 }
+
+String primeChecker(int number) {
+  return isPrimeNumber(number) ? "Prime" : "Not Prime";
+}
+

@@ -11,11 +11,17 @@ Output:
  */
 
 
+void patternPrintLeftAligned(int number) {
+  for (int i = 1; i <= number; i++) {
+    String row = "";
 
-  void patterPrint(int number) {
-    for (int i = 1; i <= number; i++) {
-     print("*"*i);
+    for (int j = 1; j <= i; j++) {
+      row += "*";
     }
+
+    print(row);
   }
+}
+
 
 

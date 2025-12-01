@@ -6,14 +6,14 @@ import 'lift_pattern_print.dart';
 void main() {
   test('number = 1', () {
     expect(
-          () => patterPrint(1),
+          () => patternPrintLeftAligned(1),
       prints("*\n"),
     );
   });
 
   test('number = 2', () {
     expect(
-          () => patterPrint(2),
+          () => patternPrintLeftAligned(2),
       prints(
           "*\n"
               "**\n"
@@ -23,7 +23,7 @@ void main() {
 
   test('number = 3', () {
     expect(
-          () => patterPrint(3),
+          () => patternPrintLeftAligned(3),
       prints(
           "*\n"
               "**\n"
@@ -34,7 +34,7 @@ void main() {
 
   test('number = 4', () {
     expect(
-          () => patterPrint(4),
+          () => patternPrintLeftAligned(4),
       prints(
           "*\n"
               "**\n"
@@ -46,7 +46,7 @@ void main() {
 
   test('number = 5', () {
     expect(
-          () => patterPrint(5),
+          () => patternPrintLeftAligned(5),
       prints(
           "*\n"
               "**\n"
@@ -59,7 +59,7 @@ void main() {
 
   test('check last line for number = 3', () {
     expect(
-          () => patterPrint(3),
+          () => patternPrintLeftAligned(3),
       prints(
           "*\n"
               "**\n"
@@ -70,7 +70,7 @@ void main() {
 
   test('check first line always one star', () {
     expect(
-          () => patterPrint(4),
+          () => patternPrintLeftAligned(4),
       prints(
           "*\n"
               "**\n"
@@ -82,7 +82,7 @@ void main() {
 
   test('number = 6', () {
     expect(
-          () => patterPrint(6),
+          () => patternPrintLeftAligned(6),
       prints(
           "*\n"
               "**\n"
@@ -96,7 +96,7 @@ void main() {
 
   test('number = 7', () {
     expect(
-          () => patterPrint(7),
+          () => patternPrintLeftAligned(7),
       prints(
           "*\n"
               "**\n"
@@ -111,7 +111,7 @@ void main() {
 
   test('number = 8', () {
     expect(
-          () => patterPrint(8),
+          () => patternPrintLeftAligned(8),
       prints(
           "*\n"
               "**\n"

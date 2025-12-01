@@ -11,19 +11,15 @@ Input:
 Output:
 Not Palindrome
  */
-String isPalindromeNumber(int number) {
+bool isPalindromeNumber(int number) {
   int original = number;
   int reversed = 0;
 
   while (number > 0) {
-    int digit = number % 10;
-    reversed = reversed * 10 + digit;
+    reversed = reversed * 10 + (number % 10);
     number ~/= 10;
   }
 
-  if (original == reversed) {
-    return "Palindrome";
-  } else {
-    return "Not Palindrome";
-  }
+  return original == reversed;
 }
+

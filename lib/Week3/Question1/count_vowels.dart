@@ -8,18 +8,31 @@ Input:
 Output:
 6
  */
+ bool isVowel(String ch) {
+    List<String> vowels = [
+      'a', 'e', 'i', 'o', 'u',
+      'A', 'E', 'I', 'O', 'U'
+    ];
+
+    for (int i = 0; i < vowels.length; i++) {
+      if (ch == vowels[i]) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+
 int countVowelsInString(String text) {
   int count = 0;
 
   for (int i = 0; i < text.length; i++) {
-    String ch = text[i];
-
-
-    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
-        ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+    if (isVowel(text[i])) {
       count++;
     }
   }
 
   return count;
 }
+

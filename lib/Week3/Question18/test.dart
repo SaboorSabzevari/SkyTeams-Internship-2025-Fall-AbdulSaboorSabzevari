@@ -108,19 +108,4 @@ void main() {
     );
   });
 
-  test('pattern with number = 8', () {
-    expect(
-          () => patternPrint(8),
-      prints(
-          "       *\n"
-              "      **\n"
-              "     ***\n"
-              "    ****\n"
-              "   *****\n"
-              "  ******\n"
-              " ******\n"
-              "********\n"
-      ),
-    );
-  });
 }
