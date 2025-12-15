@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 import 'largestNumber.dart';
 
 void main(){
-  print(largest([12,1,2]) == 12 ? 'pass🤩' : 'Fail🤣');
+  print(largest([12,1,2]) == 12 ? 'pass' : 'Fail');
 group('largest', (){
   test('Should find the greatest number', (){
     expect((largest([1,4,2,5,77,53,14,134])), equals(134));
